@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Moja Prva Stranica</title>
+</head>
+<body>
+  <section id="social">
+  <h2>Pratite me</h2>
+  <div class="social-icons">
+    <a href="https://facebook.com/tvojprofil" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+    </a>
+    <a href="https://instagram.com/tvojprofil" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+    </a>
+    <a href="https://github.com/tvojprofil" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub">
+    </a>
+  </div>
+</section>
+  <section id="projekti">
+  <h2>Moji Projekti</h2>
+
+  <div class="projekt">
+    <h3>🌐 Web stranica za kafić</h3>
+    <p>Jednostavna i responzivna web stranica napravljena za lokalni kafić – koristi HTML, CSS i malo JavaScript-a.</p>
+    <a href="#" target="_blank">Pogledaj projekt</a>
+  </div>
+
+  <div class="projekt">
+    <h3>📱 Aplikacija za zadatke</h3>
+    <p>To-Do aplikacija napravljena u React-u s mogućnošću spremanja zadataka i lokalnom memorijom.</p>
+    <a href="#" target="_blank">Pogledaj kod</a>
+  </div>
+</section>
+  <button onclick="scrollToTop()" id="backToTop">Na vrh ↑</button>
+    <div class="slideshow-container">
+  <div class="slide fade">
+    <img src="C:\Users\rogal\Desktop\Droglord\AI LOGO\ai_logo_520edcda-9b79-45d7-a904-aef7e4482531.jpg.png">
+  </div>
+
+  <div class="slide fade">
+    <img src="C:\Users\rogal\Desktop\Droglord\AI LOGO\img20250701_073916.png">
+  </div>
+
+  <div class="slide fade">
+    <img src="C:\Users\rogal\Desktop\Droglord\AI LOGO\ai_logo_a6eec3e0-9968-4041-865c-40224559d4b7.jpg.png">
+  </div>
+</div>
+    <nav>
+      <button onclick="toggleDarkMode()" id="darkModeBtn">🌙 Tamni mod</button>
+  <a href="#o-meni">O meni</a> |
+  <a href="#projekti">Projekti</a> |
+  <a href="#kontakt">Kontakt</a>
+</nav>
+  <h1>Bok svijete!</h1>
+  <img src="C:\Users\rogal\Desktop\Droglord\AI LOGO\ai_logo_a14eb3aa-4690-4a61-a73a-f8067d4f066f.jpg.png" alt="Moja slika">
+  <p>Dobrodošao/la na moju prvu web stranicu.</p>
+  <section id="o-meni">
+  <h2>O meni buraz</h2>
+  <p>Ki će nan ča, ča će nan ki? Prodajem maglu</p>
+</section>,
+<section id="blog">
+  <h2>Blog</h2>
+
+  <article class="blog-post">
+    <h3>📅 1. srpnja 2025 – Moj prvi blog post</h3>
+    <p>Počeo sam učiti web razvoj i već imam stranicu! Ovo je moj prvi korak prema izradi nečeg ozbiljnog. 🚀</p>
+  </article>
+
+  <article class="blog-post">
+    <h3>💡 Razumijevanje HTML-a</h3>
+    <p>Danas sam dublje zaronio u HTML – sve je to poput slaganja Lego kockica, ali za web. I iskreno, sviđa mi se! 😄</p>
+  </article>
+  <section id="recenzije">
+  <h2>Recenzije</h2>
+
+  <div class="recenzija">
+    <p>"Sanjin je napravio stranicu koja izgleda odlično! Brz, kreativan i jako susretljiv."</p>
+    <h4>– Ivana, vlasnica kafića</h4>
+  </div>
+
+  <div class="recenzija">
+    <p>"Web aplikacija koju je razvio za naš tim u školi bila je jednostavna za korištenje i jako korisna."</p>
+    <h4>– Marko, učitelj informatike</h4>
+  </div>
+</section>
+<section id="faq">
+  <h2>Često postavljena pitanja</h2>
+
+  <div class="faq-item">
+    <h3 onclick="toggleFaq(this)">🟦 Kako mogu kontaktirati Sanjina?</h3>
+    <p>Možete koristiti kontakt formu na stranici ili mi poslati e-mail na sanjin@example.com.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3 onclick="toggleFaq(this)">🟦 Koje tehnologije koristiš?</h3>
+    <p>Najčešće koristim HTML, CSS, JavaScript, ali volim eksperimentirati s Reactom i Pythonom.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3 onclick="toggleFaq(this)">🟦 Mogu li surađivati s tobom?</h3>
+    <p>Apsolutno! Samo mi se javi i možemo popričati o ideji.</p>
+  </div>
+</section>
+<section id="kontakt">
+  <h2>Kontakt</h2>
+  <form>
+    <input type="text" placeholder="Tvoje ime"><br><br>
+    <input type="email" placeholder="Tvoj e-mail"><br><br>
+    <textarea placeholder="Tvoja poruka"></textarea><br><br>
+    <button type="submit">Pošalji</button>
+  </form>
+</section>
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("slide");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) { slideIndex = 1 }    
+  slides[slideIndex - 1].style.display = "block";  
+  setTimeout(showSlides, 3000); // Mijenja sliku svakih 3 sekunde
+}
+</script>
+<script>
+window.onscroll = function() {
+  document.getElementById("backToTop").style.display = 
+    (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) 
+    ? "block" : "none";
+};
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+<script>
+function toggleDarkMode() {
+  document.body.classList.toggle("dark-mode");
+
+  const btn = document.getElementById("darkModeBtn");
+  const isDark = document.body.classList.contains("dark-mode");
+  btn.textContent = isDark ? "☀️ Svijetli mod" : "🌙 Tamni mod";
+}
+</script>
+<script>
+function toggleFaq(element) {
+  const answer = element.nextElementSibling;
+  answer.style.display = answer.style.display === "block" ? "none" : "block";
+}
+</script>
+<footer>
+  <div class="footer-content">
+    <div class="footer-section about">
+      <h3>O meni</h3>
+      <p>Zovem se Sanjin i izrađujem web stranice s dozom kreativnosti i koderske strasti 💻✨</p>
+    </div>
+
+    <div class="footer-section links">
+      <h3>Brzi linkovi</h3>
+      <ul>
+        <li><a href="#projekti">Projekti</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section social">
+      <h3>Pratite me</h3>
+      <a href="https://facebook.com/tvojprofil" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+      </a>
+      <a href="https://github.com/tvojprofil" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub">
+      </a>
+      <a href="https://instagram.com/tvojprofil" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+      </a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Sanjin Web Design | Sva prava pridržana.</p>
+  </div>
+</footer>
+</body>
+</html>
